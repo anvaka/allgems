@@ -23,6 +23,8 @@
     "request-promise": "^0.4.2"
   },
   "dependencies": {
+    "ngraph.forcelayout3d": "0.0.12",
+    "ngraph.fromjson": "^0.1.7",
     "ngraph.tojson": "^0.1.3"
   }
 }
