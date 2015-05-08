@@ -19,6 +19,10 @@
     "url": "https://github.com/anvaka/allgems"
   },
   "devDependencies": {
+    "ngraph.graph": "0.0.11",
     "request-promise": "^0.4.2"
+  },
+  "dependencies": {
+    "ngraph.tojson": "^0.1.3"
   }
 }
