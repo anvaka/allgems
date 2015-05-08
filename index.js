@@ -20,7 +20,10 @@ function getNext() {
   if (done && activeWorkers === 0) {
     // everybody is done
     fs.writeFileSync(outputFileName, JSON.stringify(all), 'utf8');
-    console.log('saved ' + all.length + ' packages into ' + outputFileName);
+    console.log('Done!');
+    console.log('Saved ' + all.length + ' packages into ' + outputFileName);
+    console.log('Convert the downloaded file into graph format:');
+    console.log(' node toGraph.js ./' + outputFileName);
   }
 }
 
