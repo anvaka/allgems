@@ -8,6 +8,7 @@ var activeWorkers = 0;
 var all = [];
 var done = false;
 
+console.log('Starting index. This will probably take couple hours...');
 getNext();
 
 function getNext() {
@@ -41,7 +42,7 @@ function join(res) {
   res = JSON.parse(res);
   for (var i = 0; i < res.length; ++i) {
     all.push(res[i]);
-    if (all.length % 1000 === 0) {
+    if (all.length % 500 === 0) {
       console.log('Downloaded ' + all.length + ' packages');
     }
   }
