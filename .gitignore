@@ -11,6 +11,8 @@ pids
 logs
 results
 
+labels.json
+links.bin
 gems.json
 npm-debug.log
 node_modules
