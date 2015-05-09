@@ -6,7 +6,8 @@ var labels = getLabels(graph);
 
 saveLinks(graph, labels);
 saveLabels(labels);
-console.log('Now copy `links.bin`, `labels.bin` and last position file (e.g. `./data/100.pos`) into vis folder');
+console.log('Done.');
+console.log('Copy `links.bin`, `labels.bin` and last position file (e.g. `./data/100.pos`) into vis folder');
 
 function saveLabels(labels) {
   fs.writeFileSync('labels.json', JSON.stringify(labels), 'utf8');

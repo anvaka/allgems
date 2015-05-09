@@ -5,10 +5,9 @@ var graph = loadGraph(process.argv[2] || 'graph.out');
 var layout = require('ngraph.forcelayout3d')(graph);
 
 var i = 0;
-console.log('Starting layout.');
-console.log('This process should be killed manually (ctrl + c) after ~500 steps');
+console.log('Starting layout. This will take ~60-120 minutes');
 
-while (true) {
+while (i < 501) {
   console.log('Step ' + i);
   layout.step();
   if (i % 5 === 0) {
@@ -16,6 +15,9 @@ while (true) {
   }
   ++i;
 }
+
+console.log('Done. Convert results to binary format now:');
+console.log(' node toBinary.js ./graph.out');
 
 function saveIteration(name) {
   var fname = path.join('data', name + '.pos');
